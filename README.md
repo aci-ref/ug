@@ -1,4 +1,6 @@
 
+### Helpful links:
+1.  [
 ### Setup
 
 + Follow the instructions for setting up `ruby` and `jekyll` using the Bundler method from
@@ -26,9 +28,14 @@ here: https://help.github.com/articles/using-jekyll-with-pages
     2. `authors`:  List all the authors who contributed to this chapter.  Their names will appear at the bottom of the chapter.
     3. `sections`:  List, in order, the sections of the chapter.  The content of each section is an separate markdown file located in the `_includes` directory.  The `name` attribute is the base name of the section's markdown file, and is also used as the named anchor in the generated HTML code.
 
-1. The body of `my-chapter/index.markdown` only needs to include the `chapter-down` file:
-    ```
-    {% include chapter-body.markdown %}
+    1. The body of `my-chapter/index.markdown` only needs to include the `chapter-body` file:
+        ```
+        {% include chapter-body.markdown %}
+        ```
+
+1. Create a directory to house the sections of your chapter.  This directory must be named the same as the directory you created in Step 1, and must reside in the `_includes` directory.
+    ```bash
+    mkdir _includes/my-chapter
     ```
 
 1. See the sample [supercompter](supercomputer) chapter for examples of including images, code blocks, math formulas in LaTeX
