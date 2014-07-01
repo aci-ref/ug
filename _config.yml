@@ -1,0 +1,4 @@
+name: User Guide for Scientific Computing
+markdown: kramdown
+highlighter: pygments
+exclude: ['Makefile','README.md','Gemfile','Gemfile.lock',]

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% capture thispage %}{{ page.path | split: '/' | first }}{% endcapture %}
+{% for chapter in site.data.contents %}
+ {% if thispage == chapter.page %}{% assign title = chapter.title %}{% endif %}
+{% endfor %}
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/syntax.css" />
+  <link rel="stylesheet" href="../css/chapter.css" />
+ </head>
+
+ <body>
+  <div id="main">
+   <div class="container-fluid">
+
+    <div class="row">
+     <div class="col-md-2"></div>
+
+     <div class="col-md-7 chapter-content">
+
+      <h1>{{ title }}</h1>
+
+      <h2>Contents</h2>
+      <ol>
+       {% for section in page.sections %}
+        <li><a href="#{{ section.name }}">{{ section.title }}</a></li>
+       {% endfor %}
+      </ol>
+
+      {{ content }}
+
+     </div> <!-- ./col-md-6 -->
+
+    </div> <!-- ./row -->
+
+    <div class="row">
+     <div class="col-md-1"></div>
+     <div class="col-md-8"><hr></div>
+    </div>  <!-- ./row -->
+
+    <div class="row">
+     <div class="col-md-9 authorship">
+      <p>
+      &copy; {{ site.time | date: '%Y' }}.  
+      {% if page.authors.size > 0 %}
+        Written by 
+        {% if page.authors.size > 1 %}
+          {% for a in page.authors %}
+            {% if forloop.last %} and {% endif %}
+            {{ a }}{% if page.authors.size > 2 %}{% unless forloop.last %}, {%endunless %}{% endif %}
+          {% endfor %}
+        {% else %}
+          {{ page.authors }}
+        {% endif %}
+      {% endif %}
+      </p>
+     </div> <!-- ./authorship -->
+    </div> <!-- ./row -->
+   </div> <!-- ./container-fluid -->
+  </div> <!-- ./main -->
+
+ </body>
+
+ <script type="text/javascript"
+         src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+ </script>
+ <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+ <script>
+$(document).ready(function() {
+  $('table').addClass('table table-bordered table-hover table-condensed');
+  $('img').addClass('img-responsive');
+  $('img').each(function(index) {
+    var c = $('<legend/>', {
+      html: "Figure " + (1+index) + ": " + $(this).attr('alt')
+    });
+    c.insertAfter($(this));
+  });
+});
+
+ </script>
+</html>
