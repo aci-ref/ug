@@ -1,6 +1,11 @@
 
-### Helpful links:
-1.  [
+### Helpful links
+
+1.  [Jekyll](http://jekyllrb.com) -- the site generator. 
+2.  [kramdown](http://kramdown.gettalong.org/syntax.html) -- the markdown engine used for this site 
+3.  [MathJax](http://docs.mathjax.org/en/latest) -- embded mathematical formulae
+
+
 ### Setup
 
 + Follow the instructions for setting up `ruby` and `jekyll` using the Bundler method from
