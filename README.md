@@ -46,4 +46,4 @@ here: https://help.github.com/articles/using-jekyll-with-pages
 
 1. Edit `_data/contents.yml`, add `my-chapter` and the title of your chapter.
 
-1. See the sample [supercompter](supercomputer) chapter for examples of including images, code blocks, math formulas in LaTeX
+1. See the sample [supercompter](supercomputer) chapter and its [sections](_includes/suptercomputer) for examples of including images, code blocks, math formulas in LaTeX
