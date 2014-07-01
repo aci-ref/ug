@@ -33,7 +33,7 @@ here: https://help.github.com/articles/using-jekyll-with-pages
     2. `authors`:  List all the authors who contributed to this chapter.  Their names will appear at the bottom of the chapter.
     3. `sections`:  List, in order, the sections of the chapter.  The content of each section is an separate markdown file located in the `_includes` directory.  The `name` attribute is the base name of the section's markdown file, and is also used as the named anchor in the generated HTML code.
 
-    1. The body of `my-chapter/index.markdown` only needs to include the `chapter-body` file:
+    1. The body of `my-chapter/index.markdown` only needs to include the `chapter-body.markdown` file:
         ```
         {% include chapter-body.markdown %}
         ```
@@ -42,5 +42,6 @@ here: https://help.github.com/articles/using-jekyll-with-pages
     ```bash
     mkdir _includes/my-chapter
     ```
+    1. For each section listed in the `my-chapter/index.markdown` file, there must be a markdown file in this directory for that section's content.
 
 1. See the sample [supercompter](supercomputer) chapter for examples of including images, code blocks, math formulas in LaTeX
