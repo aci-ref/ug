@@ -44,4 +44,6 @@ here: https://help.github.com/articles/using-jekyll-with-pages
     ```
     1. For each section listed in the `my-chapter/index.markdown` file, there must be a markdown file in this directory for that section's content.
 
+1. Edit `_data/contents.yml`, add `my-chapter` and the title of your chapter.
+
 1. See the sample [supercompter](supercomputer) chapter for examples of including images, code blocks, math formulas in LaTeX
